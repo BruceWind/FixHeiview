@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fixattr="http://schemas.android.com/apk/res/com.example.fixheightview"
+              android:orientation="vertical"
+              android:background="@color/bg_layout"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:padding="20dp"
+        >
+
+    <TextView
+            style="@style/font15_gray"
+            android:text="下方正是这个根据view的宽度"
+            />
+    <com.example.fixheightview.widget.FixHeiImageView
+            android:background="@android:color/holo_red_light"
+            fixattr:whratio="2.0"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/daxiong"
+            android:id="@+id/imageView"
+            android:layout_gravity="center_horizontal"/>
+</LinearLayout>
+
