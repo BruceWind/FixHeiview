@@ -12,13 +12,17 @@
             style="@style/font15_gray"
             android:text="下方正是这个根据view的宽度"
             />
+
+
     <com.example.fixheightview.widget.FixHeiImageView
             android:background="@android:color/holo_red_light"
-            fixattr:whratio="2.0"
-            android:layout_width="120dp"
+            fixattr:whratio="1.0"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:src="@drawable/daxiong"
             android:id="@+id/imageView"
             android:layout_gravity="center_horizontal"/>
+
+
 </LinearLayout>
 
