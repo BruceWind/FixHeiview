@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/fixheiview.iml" filepath="$PROJECT_DIR$/fixheiview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fixheightview.iml" filepath="$PROJECT_DIR$/fixheightview.iml" />
     </modules>
   </component>
 </project>
