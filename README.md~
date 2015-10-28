@@ -1,8 +1,11 @@
 ## fixheiview这个控件就是高度依据宽高比来自动变化的控件
 
-	代码已经传到github：https://github.com/weizongwei5/fixheiview
 
-做这个控件的目的 就是之前有轮播图，然后轮播图的宽度肯定是要fill_parent，高度肯定以宽度为基准和一个约定的宽高比来计算得出的。
+由于最近梯子大多都挂了 由于最近梯子大多都挂了，所以没有使用gradle构建，防止有些人需要重新下载gradle的一些jar包，而没有网络。
+代码已经传到github：[请点击我跳转](https://github.com/weizongwei5/fixheiview)
+
+
+	做这个控件的目的 就是之前有轮播图，然后轮播图的宽度肯定是要fill_parent，高度肯定以宽度为基准和一个约定的宽高比来计算得出的。
 因为如果服务器图片宽高比有问题的话，我这边界面就会很难看，所以我不能以服务器图片的宽高比来重绘。
 
 我的需求：
@@ -20,6 +23,13 @@
 
 **综上：做到自定义控件里面，合适的重写父类的方法才是最好的选择。**
 
+我这里这个例子配置的是1.0的比例，上截图：
+
+![](http://leanote.com/api/file/getImage?fileId=5626f6d538f4110c8f000181)
+
+“哆啦a梦！你在那？”  哈哈哈！
+
+
 好了，废话说完了。上代码：
 
 
@@ -29,9 +39,7 @@
 ``` xml
   <declare-styleable name="FixHeiImageView">
         <attr name="whratio" format="float" />
-    </declare-styleable>  <declare-styleable name="FixHeiImageView">
-        <attr name="whratio" format="float" />
-    </declare-styleable>
+    </declare-styleable> 
 
 ```
 
@@ -97,5 +105,8 @@ public class FixHeiImageView extends ImageView
 }
 
 ```
+这里代码的逻辑很简单，也有了注释， 我就不再详细解释了。这里是把高度的计算放到onMeasure中了，减少了多次计算和重绘的性能浪费。
+
 
 > - 我这里只是重写了ImageView，如果还有别的需求还可以再改下这个类，为你所用。
+> - 比如你需要重写Linearlayout，重写其他layout之类的。
